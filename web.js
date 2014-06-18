@@ -17,13 +17,13 @@ var store = new GeoStore2.GeoStore({
   index: new RTree.RTree()
 });
 
-var msa = require('./msa-full.json');
+var msa = require('./counties.json');
 
 msa.id = "MSA";
 
 _.each(msa.features, function(v, k) {
   console.log(v);
-  v.id = v.properties.GEOID;
+  v.id = v.properties.GEO_ID;
   store.add(v);
 });
 

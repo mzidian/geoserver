@@ -3,6 +3,10 @@ Geo Server
 
 Returns geo data - currently only Metropolitan Statistical Area for Lat/Lng points.
 
+To run locally:
+
+> export PORT=6000; node web.js
+
 Example Usage
 -------------
 
