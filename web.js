@@ -38,7 +38,7 @@ _.each(msa.features, function(v, k) {
     var geojson = {"type": "Point", "coordinates": [lng, lat]};
     store.contains(geojson).then(function(result) {
           console.log(result);
-          res.send(result[0].properties);
+          res.send((result && result[0] && result[0].properties) || {});
         });
 
   });
